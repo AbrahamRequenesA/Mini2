@@ -1,0 +1,44 @@
+<br><br><br>
+<div class="cabecera">
+  <img style="width: 60%; height: 500px; padding-left: 1000px;" src="/img/Calendario.png" alt="...">
+</div>
+<br><br><br><br><br>
+<div><ul>    @if(citas.length >0) {
+  
+  <button style="width: 100%;" (click)="mostrarFuturas = !mostrarFuturas">
+    {{ mostrarFuturas ? 'Mostrar Fechas Pasadas' : 'Mostrar Fechas Futuras' }}
+  </button>
+  <br><br>
+      
+        @if(mostrarFuturas) {
+          <li>
+            <p>Fechas Futuras</p>
+        @for (cita of citasFuturas; track cita) {
+        <strong>Nombre:</strong> {{ cita.nombre }}<br>
+        <strong>Número:</strong> {{ cita.numero }}<br>
+        <strong>Correo:</strong> {{ cita.correo }}<br>
+        <strong>Fecha:</strong> {{ cita.fecha }}<br>
+        <strong>Hora:</strong> {{ cita.hora }}<br>
+        <button (click)="editarCita(cita)">Editar</button><br>
+        <button (click)="eliminarCita(cita)">Eliminar</button><br>
+        
+        }
+      </li>}@else{
+        <li>
+          <p>Fechas Pasadas</p>
+          @for (cita of citasPasadas; track cita) {
+            
+            <strong>Nombre:</strong> {{ cita.nombre }}<br>
+            <strong>Número:</strong> {{ cita.numero }}<br>
+            <strong>Correo:</strong> {{ cita.correo }}<br>
+            <strong>Fecha:</strong> {{ cita.fecha }}<br>
+            <strong>Hora:</strong> {{ cita.hora }}<br><br>
+
+        }</li>
+      }
+    }@else{
+      <p>No hay citas guardadas.</p>}
+    </ul>
+  
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>

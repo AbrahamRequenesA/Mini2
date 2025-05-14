@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c8e2afe6ad.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="nosotros.component.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="cabecera">
+        <img style="width: 100%; height: 900px;" src="/img/ImgNoso/Familia.png" alt="...">
+    </div>
+    <section class="hero">
+        <p class="lema1">"Informate, Conocenos y Agenda tu cita"</p>
+        <a href="#" class="btn-Contacto" style="letter-spacing: 7px;">CONTÁCTANOS</a>
+    </section>
+    <br><br><br>
+    <div class="about-section">
+        <h2 class="section-title">¡Bienvenido a Airbnb!</h2>
+        <p class="section-text">En Airbnb, creemos que cada viaje es una oportunidad para descubrir un mundo nuevo y sentirse como en casa en cualquier parte del globo. Desde nuestras raíces humildes en San Francisco en 2008 hasta convertirnos en una comunidad global con millones de anfitriones y huéspedes en todo el mundo, nuestra misión sigue siendo la misma: ofrecer experiencias únicas y auténticas que conecten a las personas a través de la hospitalidad.</p>
+        <p class="section-text">Nos apasiona facilitar conexiones significativas entre personas de diferentes culturas, creencias y orígenes. Ya sea que estés buscando una escapada tranquila en la naturaleza, una aventura emocionante en la ciudad o una inmersión en la cultura local, Airbnb tiene el lugar perfecto para ti.</p>
+        <p class="section-text">Nuestros anfitriones abren las puertas de sus hogares para brindarte una estancia memorable y personalizada. Desde acogedores apartamentos urbanos hasta encantadoras casas rurales y exclusivas experiencias de alojamiento, cada espacio en Airbnb cuenta una historia única y te invita a ser parte de ella.</p>
+        <p class="section-text">Además de ofrecerte alojamiento, en Airbnb también encontrarás una amplia gama de actividades y experiencias diseñadas para que descubras lo mejor de cada destino. Desde clases de cocina con chefs locales hasta recorridos guiados por barrios históricos, nuestras experiencias te sumergirán en la vida cotidiana de los lugareños y te permitirán vivir momentos inolvidables.</p>
+        <p class="section-text" style="text-align: center;"><b>¡Únete a nuestra comunidad global y comienza a explorar el mundo de una manera completamente nueva con Airbnb!</b></p>
+      </div>
+
+<div class="TARJETA">
+    <div class="tarjetas">
+      <div class="tarjetas__item">
+        <h2 class="tarjetas__titulo">MISIÓN</h2>
+        <div class="tarjetas__info">
+          <p id="PT">Conectar a personas de todo el mundo para que puedan vivir experiencias únicas y auténticas, sintiéndose como en casa donde sea que vayan.</p>
+        </div>
+      </div>
+      <div class="tarjetas__item">
+        <h2 class="tarjetas__titulo">VISIÓN</h2>
+        <div class="tarjetas__info">
+          <p id="PT">Crear un mundo donde todos puedan sentirse bienvenidos y encuentren un lugar donde pertenecer, promoviendo la diversidad, la inclusión y la autenticidad.</p>
+        </div>
+      </div>
+      <div class="tarjetas__item">
+        <h2 class="tarjetas__titulo">OBJETIVO</h2>
+        <div class="tarjetas__info">
+          <p id="PT">Facilitar el intercambio cultural y la conexión humana a través de la hospitalidad, permitiendo que millones de personas exploren el mundo y se sientan parte de una comunidad global.</p>
+        </div>
+      </div>
+    </div>
+</div>
+<br><br><br><br>
+
+<script>
+   $(document).ready(function(){
+  var docWidth = $('body').width(),
+      $wrap = $('#wrap'),
+      $images = $('#wrap .hb'),
+      slidesWidth = $wrap.width();
+  
+  $(window).on('resize', function(){
+    docWidth = $('body').width();
+    slidesWidth = $wrap.width();
+  })
+  
+  $(document).mousemove(function(e) {
+    var mouseX = e.pageX,
+        offset = mouseX / docWidth * slidesWidth - mouseX / 2;
+    
+    $images.css({
+      '-webkit-transform': 'translate3d(' + -offset + 'px,0,0)',
+              'transform': 'translate3d(' + -offset + 'px,0,0)'
+    });
+  });
+})
+</script>
+
+</body>
+</html>

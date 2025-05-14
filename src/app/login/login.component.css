@@ -1,0 +1,78 @@
+/* Contenedor principal */
+.login-card {
+  max-width: 450px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.login-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3f51b5;
+}
+
+/* Formulario */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Inputs */
+.mat-mdc-form-field {
+  font-size: 16px;
+}
+
+/* Botón de submit */
+.submit-button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  height: 48px;
+  margin-top: 1rem;
+}
+
+/* Checkbox */
+.remember-me {
+  margin-top: -0.5rem;
+}
+
+/* Mensaje de error */
+.server-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #ffebee;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+/* Spinner */
+mat-spinner {
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer-actions {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .login-card {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}

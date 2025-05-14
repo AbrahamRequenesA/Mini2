@@ -1,0 +1,47 @@
+/* Estilos para que la barra de navegación ocupe todo el ancho */
+.navbar {
+    width: 100%; /* Ocupa el 100% del ancho disponible */
+    height: 80px; /* Altura deseada para la barra de navegación */
+  }
+  
+  .container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  /* Ajuste para que el contenido de la barra ocupe todo el ancho */
+  .navbar-collapse {
+    justify-content: space-between;
+  }
+  
+  /* Estilos para los elementos de la barra de navegación */
+  .navbar-nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Espacio uniforme entre los elementos */
+  }
+  
+  .nav-item {
+    flex-grow: 1; /* Hace que los elementos se expandan igualmente */
+    text-align: center; /* Centra el texto dentro de cada elemento */
+  }
+  
+  .nav-link {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #333;
+    letter-spacing: 1px;
+  }
+  
+  /* Estilos para el botón de búsqueda */
+  .form-control {
+    width: 100%;
+    max-width: 300px; /* Ajusta el ancho máximo del campo de búsqueda */
+  }
+  
+  .btn-outline-success {
+    margin-left: 10px; /* Espacio a la izquierda del botón de búsqueda */
+  }

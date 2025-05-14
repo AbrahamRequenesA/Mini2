@@ -1,0 +1,28 @@
+<div class="cabecera">
+  <img style="width: 90%; height: 900px; padding-left: 200px;" src="/img/Citas.png" alt="...">
+</div>
+<br><br><hr><br><br><br><br><br><br>
+<div class="formularioCita">
+<div>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" #nombreInput required>
+  </div>
+  <div>
+    <label for="numero">Número:</label>
+    <input type="text" id="numero" #numeroInput required>
+  </div>
+  <div>
+    <label for="correo">Correo Electrónico:</label>
+    <input type="email" id="correo" #correoInput required>
+  </div>
+  <div>
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" #fechaInput required>
+  </div>
+  <div>
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora" #horaInput required>
+  </div>
+  <button (click)="registrarReserva(nombreInput.value, numeroInput.value, correoInput.value, fechaInput.value, horaInput.value)">Registrar Reserva</button>
+</div>
+  <br><br><br><br><br><br><br><br><br><br><br>

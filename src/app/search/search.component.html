@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airbnb</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rasa:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c8e2afe6ad.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+<section class="listings">
+            
+    <div class="listing-grid">
+        @for (listing of res; track listing){
+      <div class="listing-row">
+        
+        <div class="listing-card">
+          <img [src]="listing.imgSrc" [alt]="listing.titulo">
+          <h3 class="p-titulo">{{ listing.titulo }}</h3>
+          <p class="p-pais">{{ listing.pais }}</p>
+          <p class="p-fechas">{{ listing.fechas }}</p>
+          <p class="p-precio">{{ listing.precio }}</p>
+          <a class="btn" [routerLink]="['/reserva']" style="letter-spacing: 6px;">¡RESERVA YA!</a>
+        </div>
+    
+      </div>}
+    
+    </div>
+  </section>
+  
+</body>
+</html>

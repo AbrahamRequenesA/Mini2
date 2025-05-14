@@ -1,0 +1,115 @@
+<div class="contact-container">
+  <h2>Formulario de Contacto</h2>
+  
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+    <div class="form-group">
+      <label for="nombre">Nombre completo</label>
+      <input 
+        type="text" 
+        id="nombre" 
+        formControlName="nombre"
+        [class.invalid]="submitted && f['nombre'].errors"
+      >
+      @if (submitted && f['nombre'].errors) {
+        <div class="error-message">
+          @if (f['nombre'].errors['required']) {
+            <span>El nombre es requerido</span>
+          }
+          @if (f['nombre'].errors['minlength']) {
+            <span>Mínimo 3 caracteres</span>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="email">Correo electrónico</label>
+      <input 
+        type="email" 
+        id="email" 
+        formControlName="email"
+        [class.invalid]="submitted && f['email'].errors"
+      >
+      @if (submitted && f['email'].errors) {
+        <div class="error-message">
+          @if (f['email'].errors['required']) {
+            <span>El email es requerido</span>
+          }
+          @if (f['email'].errors['email']) {
+            <span>Ingrese un email válido</span>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="telefono">Teléfono (opcional)</label>
+      <input 
+        type="tel" 
+        id="telefono" 
+        formControlName="telefono"
+        placeholder="10 dígitos"
+        [class.invalid]="submitted && f['telefono'].errors"
+      >
+      @if (submitted && f['telefono'].errors) {
+        <div class="error-message">
+          <span>Ingrese 10 dígitos numéricos</span>
+        </div>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="motivo">Motivo de contacto</label>
+      <select 
+        id="motivo" 
+        formControlName="motivo"
+        [class.invalid]="submitted && f['motivo'].errors"
+      >
+        @for (reason of contactReasons; track reason.value) {
+          <option [value]="reason.value">{{ reason.label }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="mensaje">Mensaje</label>
+      <textarea 
+        id="mensaje" 
+        formControlName="mensaje"
+        rows="5"
+        [class.invalid]="submitted && f['mensaje'].errors"
+      ></textarea>
+      @if (submitted && f['mensaje'].errors) {
+        <div class="error-message">
+          @if (f['mensaje'].errors['required']) {
+            <span>El mensaje es requerido</span>
+          }
+          @if (f['mensaje'].errors['minlength']) {
+            <span>Mínimo 10 caracteres</span>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="form-checkbox">
+      <input 
+        type="checkbox" 
+        id="notificaciones" 
+        formControlName="notificaciones"
+      >
+      <label for="notificaciones">Recibir notificaciones por email</label>
+    </div>
+
+    <button 
+      type="submit" 
+      class="submit-btn"
+      [disabled]="loading"
+    >
+      @if (loading) {
+        <span class="loader"></span>
+      } @else {
+        Enviar Mensaje
+      }
+    </button>
+  </form>
+</div>

@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['/home']" href="#"><img src="/img/Logo-sin-fondo.png" alt="..." height="150px" length="300px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/home']" style="letter-spacing: 6px;">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/ayuda']" style="letter-spacing: 6px;">AYUDA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/contacto']" style="letter-spacing: 6px;">CONTACTO</a>
+          </li><li class="nav-item">
+            <a class="nav-link" [routerLink]="['/nosotros']" style="letter-spacing: 6px;">NOSOTROS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" [routerLink]="['/citas']" style="letter-spacing: 6px;">Citas</a>
+          </li>
+          @if (!adminLogueado) {
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/login']" style="letter-spacing: 6px;">Login</a>
+            </li>
+            } @else {
+              <li class="nav-item d-flex align-items-center gap-2">
+                <span class="nav-link">Bienvenido: {{ adminLogueado.fullName }}</span>
+                <button class="btn btn-sm btn-outline-danger" (click)="logout()">Cerrar sesión</button>
+              </li>
+            }
+
+        </ul>
+        <form class="d-flex" role="search" (keyup.enter)="onSearch(searchInput.value)">
+          <input class="form-control me-2" type="search" #searchInput placeholder="Buscar..." aria-label="Search">
+          <button class="btn btn-outline-success" type="button" (click)="onSearch(searchInput.value)">Buscar</button>
+        </form>
+        
+      </div>
+    </div>
+  </nav>

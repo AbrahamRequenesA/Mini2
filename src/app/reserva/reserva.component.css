@@ -1,0 +1,52 @@
+.formularioCita {
+  font-size: 40px;
+  max-width: 600px; /* Ancho máximo del formulario */
+  margin: 0 auto; /* Margen automático para centrar horizontalmente */
+  text-align: center; /* Alineación de contenido al centro */
+}
+
+/* Estilos para los contenedores de etiquetas y campos de entrada */
+.formularioCita div {
+  margin-bottom: 20px;
+  text-align: left; /* Alinear etiquetas y campos de entrada a la izquierda */
+}
+
+/* Estilos para las etiquetas */
+.formularioCita label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Estilos para los campos de entrada */
+.formularioCita input[type="text"],
+.formularioCita input[type="email"],
+.formularioCita input[type="date"],
+.formularioCita input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 25px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* para incluir el padding en el ancho */
+  margin-top: 5px; /* añadimos un pequeño margen arriba para separar del label */
+}
+
+/* Estilos para el botón */
+.formularioCita button {
+  padding: 10px 20px;
+  font-size: 30px;
+  background-color: #16a085;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: solid #16a085 2px;
+}
+
+/* Estilos para el botón al pasar el mouse */
+.formularioCita button:hover {
+  background-color: #ffffff;
+  color: #16a085;
+}

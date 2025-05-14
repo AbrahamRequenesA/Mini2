@@ -1,0 +1,113 @@
+<head>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+<body>
+<br><br><br><br><br><br>
+<div class="container">
+  <h1>Preguntas Frecuentes</h1>
+
+
+<div class="preguntas-respuestas">
+  <div class="pregunta-respuesta">
+    <button class='far' (click)="mostrarRespuesta = !mostrarRespuesta">
+    <h4>¿Como puedo realizar una reserva?
+      {{ mostrarRespuesta ? '&#xf152;' : '&#xf150;' }}</h4>
+    </button>
+    @if (mostrarRespuesta) {
+        <p>Primero debes elegir el destino a donde deseas viajar, luego das click a la opcion de reservar, llenas el formulario y listo</p>
+      }
+  </div>
+
+  <div class="pregunta-respuesta">
+    <button class='far' (click)="mostrarRespuesta2 = !mostrarRespuesta2">
+    <h4>¿Cuáles son los tipos de hospedajes que ofrecen?
+      {{ mostrarRespuesta2 ? '&#xf152;' : '&#xf150;' }}</h4>
+    </button>
+    @if (mostrarRespuesta2) {
+      <p>Ofrecemos una variedad de opciones, desde habitaciones privadas hasta casas completas y apartamentos.</p>
+    }
+  </div>
+</div>
+
+<div class="pregunta-respuesta">
+  <button class='far' (click)="mostrarRespuesta3 = !mostrarRespuesta3">
+  <h4>¿Qué servicios están incluidos en la renta del hospedaje?
+    {{ mostrarRespuesta3 ? '&#xf152;' : '&#xf150;' }}</h4>
+  </button>
+  @if (mostrarRespuesta3) {
+      <p>Los servicios pueden variar, pero generalmente incluyen ropa de cama, toallas, wifi y algunos ofrecen servicios adicionales como limpieza diaria o desayuno.</p>
+    }
+</div>
+
+<div class="pregunta-respuesta">
+  <button class='far' (click)="mostrarRespuesta4 = !mostrarRespuesta4">
+  <h4>¿Se admiten mascotas en los hospedajes?
+    {{ mostrarRespuesta4 ? '&#xf152;' : '&#xf150;' }}</h4>
+  </button>
+  @if (mostrarRespuesta4) {
+      <p>Algunos de nuestros hospedajes permiten mascotas, pero esto puede variar. Te sugerimos filtrar tu búsqueda para encontrar opciones que acepten mascotas.</p>
+    }
+</div>
+
+<div class="pregunta-respuesta">
+  <button class='far' (click)="mostrarRespuesta5 = !mostrarRespuesta5">
+  <h4>¿Qué debo hacer si tengo algún problema durante mi estadía?
+    {{ mostrarRespuesta5 ? '&#xf152;' : '&#xf150;' }}</h4>
+  </button>
+  @if (mostrarRespuesta5) {
+      <p>Si experimentas algún problema durante tu estadía, comunícate con nuestro equipo de soporte. Estamos disponibles las 24 horas para ayudarte.</p>
+    }
+</div>
+
+<div class="pregunta-respuesta">
+  <button class='far' (click)="mostrarRespuesta6 = !mostrarRespuesta6">
+  <h4>¿Los hospedajes están ubicados cerca de atracciones turísticas?
+    {{ mostrarRespuesta6 ? '&#xf152;' : '&#xf150;' }}</h4>
+  </button>
+  @if (mostrarRespuesta6) {
+      <p>Muchos de nuestros hospedajes están ubicados en áreas cercanas a atracciones turísticas. Puedes filtrar por ubicación para encontrar uno que se ajuste a tus necesidades.</p>
+    }
+</div>
+
+<div class="pregunta-respuesta">
+  <button class='far' (click)="mostrarRespuesta7 = !mostrarRespuesta7">
+  <h4>¿Ofrecen descuentos por estadías prolongadas?
+    {{ mostrarRespuesta7 ? '&#xf152;' : '&#xf150;' }}</h4>
+  </button>
+  @if (mostrarRespuesta7) {
+      <p>De momento no tenemos información sobre ningun descuento en alguna de las reservaciones</p>
+    }
+</div>
+
+<div class="pregunta-respuesta">
+  <button class='far' (click)="mostrarRespuesta8 = !mostrarRespuesta8">
+  <h4>¿Se puede realizar el check-in fuera del horario establecido?
+    {{ mostrarRespuesta8 ? '&#xf152;' : '&#xf150;' }}</h4>
+  </button>
+  @if (mostrarRespuesta8) {
+      <p>Algunos hospedajes permiten check-ins flexibles, pero es importante coordinar esto con el anfitrión con anticipación.</p>
+    }
+</div>
+
+<div class="pregunta-respuesta">
+  <button class='far' (click)="mostrarRespuesta9 = !mostrarRespuesta9">
+  <h4>¿Qué medidas de limpieza se están tomando debido a la pandemia?
+    {{ mostrarRespuesta9 ? '&#xf152;' : '&#xf150;' }}</h4>
+  </button>
+  @if (mostrarRespuesta9) {
+      <p>Estamos siguiendo estrictos protocolos de limpieza y desinfección para garantizar la seguridad de nuestros huéspedes.</p>
+    }
+</div>
+
+<div class="pregunta-respuesta">
+  <button class='far' (click)="mostrarRespuesta10 = !mostrarRespuesta10">
+  <h4>¿Cuál es la política con respecto a fiestas o eventos en los hospedajes?
+    {{ mostrarRespuesta10 ? '&#xf152;' : '&#xf150;' }}</h4>
+  </button>
+  @if (mostrarRespuesta10) {
+      <p>La mayoría de nuestros hospedajes tienen políticas claras sobre fiestas o eventos. Te recomendamos revisar las reglas de la casa al momento de reservar.</p>
+    }
+</div>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
